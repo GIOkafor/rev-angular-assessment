@@ -1,4 +1,4 @@
-export const fm84Profile = {
+export const Fm84Profile = {
     "data":{
        "artist":{
           "id":"1xvEo98zythSrgN69GQevk",

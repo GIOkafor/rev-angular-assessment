@@ -19,6 +19,10 @@
 .primary_text {
   color: #6b4ba6;
 }
+.primary_background {
+  background-color: #6b4ba6;
+  color: #fff;
+}
 
 .seconday_text {
   color: #6c3342;

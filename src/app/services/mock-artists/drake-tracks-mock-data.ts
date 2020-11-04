@@ -1,4 +1,4 @@
-export const DrakeTracks = [
+export const DrakeTracks =
     {
         "tracks": [
           {
@@ -882,5 +882,4 @@ export const DrakeTracks = [
             "uri": "spotify:track:0TlLq3lA83rQOYtrqBqSct"
           }
         ]
-      }
-]
+      };
