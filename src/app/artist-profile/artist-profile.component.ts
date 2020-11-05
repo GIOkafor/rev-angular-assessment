@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ArtistsService } from '../services/mock-artists/artists.service';
 
 @Component({
   selector: 'app-artist-profile',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArtistProfileComponent implements OnInit {
 
-  constructor() { }
+  artist: any;
+
+  constructor(
+    private route: ActivatedRoute,
+    private artistService: ArtistsService
+  ) { }
 
   ngOnInit(): void {
+    this.route.params.subscribe(path => {
+      this.artist = this.artistService.getArtistProfile(path.id).data.artist;
+      console.log('Artist is: ', this.artist);
+    });
   }
 
 }

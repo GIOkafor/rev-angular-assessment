@@ -26,13 +26,13 @@ export class ArtistsService {
     ];
   }
 
-  getArtistProfile(artistId){
+  getArtistProfile(artistId): any{
     const artists = this.getAllArtists();
-    return artists.filter(artist => artist.data.artist.id === artistId);
+    return artists.find(artist => artist.data.artist.id === artistId);
   }
 
   getArtistMusic(artistId){
     const artists = this.getAllArtists();
-    return artists.filter(artist => artist.data.artist.id === artistId)[0].tracks;
+    return artists.find(artist => artist.data.artist.id === artistId).tracks;
   }
 }

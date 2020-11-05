@@ -1,1 +1,36 @@
-<p>artist-profile works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col d-flex">
+            <h2 class="artist_name">{{artist?.profile?.name}}</h2>
+            <img *ngIf="artist?.profile?.verified" src="assets/images/verified-logo.png" alt="verified check mark" height="50px">
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-sm-12 col-md-8 d-flex flex-column">
+            <h4>Bio</h4>
+            <p class="artist_bio">
+                {{artist?.profile?.biography.text}}
+            </p>
+        </div>
+
+        <div class="col-sm-12 col-md-4 d-flex flex-column">
+            <h4>Social</h4>
+            <div class="social_icons" *ngIf="artist?.profile?.externalLinks.items.length > 0; else noSocial">
+                <a *ngFor="let link of artist?.profile?.externalLinks.items" [href]="link.url">
+                    <i class="fab fa-lg fa-facebook mr-3" *ngIf="link.name === 'FACEBOOK'"></i>
+                    <i class="fab fa-lg fa-twitter mr-3" *ngIf="link.name === 'TWITTER'"></i>
+                    <i class="fab fa-lg fa-instagram mr-3" *ngIf="link.name === 'INSTAGRAM'"></i>
+                    <i class="fab fa-lg fa-wikipedia-w mr-3" *ngIf="link.name === 'WIKIPEDIA'"></i>
+                </a>
+            </div>
+            <ng-template #noSocial>No social links available</ng-template>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <track-list></track-list>
+        </div>
+    </div>
+</div>
