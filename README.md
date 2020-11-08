@@ -21,3 +21,5 @@ Your task is to make use of this service and data to build a user interface as s
 Here’s a [video](https://youtu.be/N3Ly3rJep0I) showing the final solution in action.
 
 Your solution doesn’t have to match exactly in style but it should at least accomplish all the key features listed above.
+
+Bonus points for making use of the brand colors and font in the style.css file
