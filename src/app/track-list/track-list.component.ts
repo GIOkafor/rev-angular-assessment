@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'track-list',
@@ -8,10 +9,29 @@ import { Component, OnInit, Input } from '@angular/core';
 export class TrackListComponent implements OnInit {
 
   @Input() tracks: any;
+  audioPlayer: any;
+  playingSource: String;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.audioPlayer = new Audio('');
+  }
+
+  pauseAudio(){
+    this.audioPlayer.pause();
+    this.playingSource = null;
+  }
+
+  playTrack(trackSrc){
+    this.playingSource = trackSrc;
+    this.audioPlayer.src = trackSrc;
+    
+    this.audioPlayer.play();
+  }
+
+  isPlaying(track){
+    return (this.playingSource === track);
   }
 
 }

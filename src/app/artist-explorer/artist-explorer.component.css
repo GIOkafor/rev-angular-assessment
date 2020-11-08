@@ -3,3 +3,7 @@
   width: 80px;
   border-radius: 50%;
 }
+.avatar_image:hover,
+.selected_artist {
+  border: 5px solid #007bff;
+}

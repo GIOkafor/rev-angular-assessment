@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ArtistsService } from '../services/mock-artists/artists.service';
-import { Router } from '@angular/router'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'artist-explorer',
@@ -10,6 +10,7 @@ import { Router } from '@angular/router'
 export class ArtistExplorerComponent implements OnInit {
 
   artists: any;
+  selectedArtist: any;
 
   constructor(
     private artistsService: ArtistsService,
@@ -19,12 +20,16 @@ export class ArtistExplorerComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.router.events.subscribe((val: any) => {
+      if(location.pathname !== '/'){
+        this.selectedArtist = location.pathname.split('/artist-profile/')[1];
+      }
+    });
+    
   }
 
   selectArtist(artistId){
-    console.log('selected artist id: ', artistId);
-    //console.log('artist music is: ', this.artistsService.getArtistMusic(artistId));
-    //console.log('artist data is: ', this.artistsService.getArtistProfile(artistId));
+    this.selectedArtist = artistId;
     this.router.navigate(['/artist-profile', artistId]);
   }
 

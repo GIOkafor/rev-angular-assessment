@@ -3,9 +3,17 @@
 
     <div class="card">
         <ul class="list-group list-group-flush">
-            <li class="list-group-item">Track Name <i class="fas fa-play"></i> </li>
-            <li class="list-group-item">Track Name <i class="fas fa-play"></i> </li>
-            <li class="list-group-item">Track Name <i class="fas fa-play"></i> </li>
+            <li class="list-group-item d-flex justify-content-between" *ngFor="let track of tracks">
+                <span class="name">{{track.name}}</span> 
+                <span class="play_options">
+                    <i class="fas fa-play clickable" *ngIf="track.preview_url && !isPlaying(track.preview_url)" (click)="playTrack(track.preview_url)"></i>
+                    <i class="fas fa-pause clickable" *ngIf="track.preview_url && isPlaying(track.preview_url)" (click)="pauseAudio()"></i>
+                </span>
+            </li>
         </ul>
+
+        <p class="pl-3 pt-3" *ngIf="tracks.length < 1">
+            No tracks available for the given artist
+        </p>
     </div>
 </div>

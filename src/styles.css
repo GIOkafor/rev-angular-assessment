@@ -11,6 +11,10 @@
   src: url(assets/fonts/JosefinSans-Bold.ttf);
 }
 
+body {
+  font-family: josefin-sans-regular;
+}
+
 :root {
   --primary-bg-color: #6b4ba6;
   --secondary-bg-color: #6c3342;
@@ -26,4 +30,8 @@
 
 .seconday_text {
   color: #6c3342;
+}
+
+.clickable {
+  cursor: pointer;
 }

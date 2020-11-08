@@ -9,9 +9,10 @@
     <div class="row mt-3">
         <div class="col-sm-12 col-md-8 d-flex flex-column">
             <h4>Bio</h4>
-            <p class="artist_bio">
+            <p class="artist_bio" [ngClass]="{'shortened': shortened}">
                 {{artist?.profile?.biography.text}}
             </p>
+            <a class="mb-3 show-hide-text clickable" (click)="shortened = !shortened">{{shortened ? 'Read More' : 'Show Less'}}</a>
         </div>
 
         <div class="col-sm-12 col-md-4 d-flex flex-column">
@@ -28,9 +29,9 @@
         </div>
     </div>
 
-    <div class="row">
-        <div class="col">
-            <track-list></track-list>
+    <div class="row mt-3">
+        <div class="col-sm-12 col-md-8">
+            <track-list [tracks]="artistTracks"></track-list>
         </div>
     </div>
 </div>

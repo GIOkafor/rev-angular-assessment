@@ -2,9 +2,9 @@
 
     <div class="artists d-flex flex-wrap justify-content-center">
         <div class="artist mr-2 mb-2" *ngFor="let artist of artists" (click)="selectArtist(artist.data.artist.id)">
-            <img class="avatar_image" src={{artist.data.artist.visuals.avatarImage.sources[0].url}} alt="">
+            <img class="avatar_image clickable" [ngClass]="{'selected_artist': selectedArtist === artist.data.artist.id}" src={{artist.data.artist.visuals.avatarImage.sources[0].url}} alt="Artist Profile Picture">
         </div>
     </div>
 
-    <router-outlet></router-outlet>
+
 </div>

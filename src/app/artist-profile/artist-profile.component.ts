@@ -10,6 +10,8 @@ import { ArtistsService } from '../services/mock-artists/artists.service';
 export class ArtistProfileComponent implements OnInit {
 
   artist: any;
+  artistTracks: any;
+  shortened: boolean = true;
 
   constructor(
     private route: ActivatedRoute,
@@ -18,8 +20,9 @@ export class ArtistProfileComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.subscribe(path => {
-      this.artist = this.artistService.getArtistProfile(path.id).data.artist;
-      console.log('Artist is: ', this.artist);
+      const artistId = path.id;
+      this.artist = this.artistService.getArtistProfile(artistId).data.artist;
+      this.artistTracks = this.artistService.getArtistMusic(artistId);
     });
   }
 

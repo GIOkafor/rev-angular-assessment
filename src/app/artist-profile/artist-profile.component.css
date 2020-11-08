@@ -1,0 +1,16 @@
+.artist_bio {
+  margin-bottom: 0px;
+}
+.shortened {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+.show-hide-text {
+  color: #007bff !important;
+}
+.show-hide-text:hover {
+  text-decoration: underline !important;
+}
