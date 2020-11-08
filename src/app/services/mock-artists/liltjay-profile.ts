@@ -1,4 +1,4 @@
-export const lilTjayProfile = {
+export const LilTjayProfile = {
     "data":{
        "artist":{
           "id":"6jGMq4yGs7aQzuGsMgVgZR",

@@ -1,4 +1,4 @@
-export const DrakeTracks = [
+export const DrakeTracks =
     {
         "tracks": [
           {
@@ -883,4 +883,3 @@ export const DrakeTracks = [
           }
         ]
       }
-]

@@ -1,4 +1,4 @@
-export const WeekndTracks = [
+export const WeekndTracks =
     {
         "tracks": [
           {
@@ -812,5 +812,4 @@ export const WeekndTracks = [
             "uri": "spotify:track:2p8IUWQDrpjuFltbdgLOag"
           }
         ]
-      }
-];
+      };
