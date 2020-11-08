@@ -1,27 +1,25 @@
 # AngularAssessment
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.4.
+The objective of this assignment is to create an artist explorer portal.
 
-## Development server
+For simplicity’s sake the artists to be ‘discovered’ are stored as json objects in a typescript file and services for retrieving profile information and music are preconfigured in the artist.service file.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+![Image of mock data and service](https://lh4.googleusercontent.com/OCJBEfSn_S-_OOQa_xoG_73-U5SMRACy-AvaVynQOV6f9VPvYBDKgXXr2WXvipC6G6sHomR8e5q7KKGSml5uMrwqEgHQ1kKvMgUAK_4)
 
-## Code scaffolding
+Your task is to make use of this service and data to build a user interface as shown in the images below.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+![Desktop view of finished app](https://lh4.googleusercontent.com/l17OJ-iP4rMNyFr9lLnmDu6dZ9MV5XNbNvbTpBrSU2rzANnwNp7NV9dPMn1Iwljbu7pc3rxlr6NncamxYYUYunG_28m25NnPZ-gByCno)
 
-## Build
+![Mobile view of finished app](https://lh3.googleusercontent.com/mcrip-k3Sn5RKvMDHoi9D2qkoMO1soVnEnwNVO_K_KDfhy3sRpJkocAaiOJZ4P5b7FGeIyFEKx5-bzWxXzA0abnYq6a-7ad19JGnAh58MDBoNrhlz7_Y88eohtIr7LO02kReDxF3)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### Objectives
 
-## Running unit tests
+- It should be responsive i.e scale up or down, depending on the user’s viewport.
+- It should pause and play audio tracks when a user clicks the play button (**the url to use for playback, is found in the preview_url property**).
+- If an artist doesn't have music available it should show a message to users
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Here’s a [video](https://youtu.be/N3Ly3rJep0I) showing the final solution in action.
 
-## Running end-to-end tests
+Your solution doesn’t have to match exactly in style but it should at least accomplish all the key features listed above.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Bonus points for making use of the brand colors and font in the style.css file
