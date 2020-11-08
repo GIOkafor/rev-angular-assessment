@@ -23,6 +23,8 @@ export class ArtistExplorerComponent implements OnInit {
     this.router.events.subscribe((val: any) => {
       if(location.pathname !== '/'){
         this.selectedArtist = location.pathname.split('/artist-profile/')[1];
+      }else{
+        this.selectedArtist = null;
       }
     });
     
